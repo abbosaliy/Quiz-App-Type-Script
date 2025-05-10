@@ -32,6 +32,7 @@
   background-color: #4caf50;
   color: white;
 }
+
 .correct:hover {
   background-color: #45a049;
   color: white;
@@ -41,10 +42,12 @@
   background-color: #f44336;
   color: white;
 }
+
 .wrong:hover {
   background-color: #d32f2f;
   color: white;
 }
+
 .correct,
 .wrong {
   transition: background-color 0.3s ease;
