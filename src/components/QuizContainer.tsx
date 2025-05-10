@@ -13,27 +13,27 @@ function QuizQuestion() {
 
   const renderQuestion: Question[] = [
     {
-      question: 'Wie lang ist die Große Mauer von China?',
+      question: '1.  Wie lang ist die Große Mauer von China?',
       options: ['5000 km', '6500 km', '4500 km', '6000 km'],
       correctAnswer: 3,
     },
     {
-      question: 'Was ist die größte Insel der Welt?',
+      question: '2. Was ist die größte Insel der Welt?',
       options: [' Sumatra', 'Neuguinea', 'Grönland', '	Madagaskar'],
       correctAnswer: 2,
     },
     {
-      question: 'Welches Land hat die meisten Einwohner der Welt?',
+      question: '3. Welches Land hat die meisten Einwohner der Welt?',
       options: ['China', 'Japan', 'Russland', 'Indien'],
       correctAnswer: 0,
     },
     {
-      question: 'Welcher Musiker wird oft „King of Pop“ genannt?',
+      question: '4. Welcher Musiker wird oft „King of Pop“ genannt?',
       options: ['Michael Jackson', 'Elvis Presley', 'Justin Bieber', 'Prince'],
       correctAnswer: 0,
     },
     {
-      question: 'Was war das erste Computerspiel der Geschichte?',
+      question: '5. Was war das erste Computerspiel der Geschichte?',
       options: ['Super Mario Bros', 'Pong', 'Tetris', 'Minecraft'],
       correctAnswer: 1,
     },
