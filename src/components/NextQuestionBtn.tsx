@@ -14,7 +14,7 @@ function NextQuestion({ handleNextQuestion }: NextQuestionProps) {
       onClick={() => renderQuestion()}
       className="nextQuestion"
     >
-      Next
+      Waiter
     </button>
   );
 }

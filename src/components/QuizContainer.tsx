@@ -18,14 +18,24 @@ function QuizQuestion() {
       correctAnswer: 3,
     },
     {
-      question: 'Was ist die größte Zahl mit fünf Ziffern?',
-      options: ['99999', '99899', '99199', '19999'],
-      correctAnswer: 0,
+      question: 'Was ist die größte Insel der Welt?',
+      options: [' Sumatra', 'Neuguinea', 'Grönland', '	Madagaskar'],
+      correctAnswer: 2,
     },
     {
       question: 'Welches Land hat die meisten Einwohner der Welt?',
       options: ['China', 'Japan', 'Russland', 'Indien'],
       correctAnswer: 0,
+    },
+    {
+      question: 'Welcher Musiker wird oft „King of Pop“ genannt?',
+      options: ['Michael Jackson', 'Elvis Presley', 'Justin Bieber', 'Prince'],
+      correctAnswer: 0,
+    },
+    {
+      question: 'Was war das erste Computerspiel der Geschichte?',
+      options: ['Super Mario Bros', 'Pong', 'Tetris', 'Minecraft'],
+      correctAnswer: 1,
     },
   ];
 
@@ -37,6 +47,7 @@ function QuizQuestion() {
       alert('Gut gemacht! Du hast das Quiz erfolgreich abgeschlossen.');
     }
   }
+
   const [answer, setAnswer] = useState<number | null>(null);
 
   function handleAnswer(answerIndex: number) {
@@ -45,7 +56,7 @@ function QuizQuestion() {
 
   return (
     <div className="quizBox">
-      <h2>{renderQuestion[question].question}</h2>
+      <h2 className="quiz-text">{renderQuestion[question].question}</h2>
 
       <div className="quizBox-options">
         {renderQuestion[question].options.map((quiz, index) => {
@@ -53,10 +64,8 @@ function QuizQuestion() {
           if (answer !== null) {
             if (index === renderQuestion[question].correctAnswer) {
               className += ' correct';
-              alert('Richtig');
             } else if (index === answer) {
               className += ' wrong';
-              alert('Leider falsch');
             }
           }
           return (
