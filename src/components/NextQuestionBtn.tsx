@@ -5,13 +5,9 @@ type NextQuestionProps = {
 };
 
 function NextQuestion({ handleNextQuestion }: NextQuestionProps) {
-  function renderQuestion() {
-    handleNextQuestion();
-  }
-
   return (
     <button
-      onClick={() => renderQuestion()}
+      onClick={() => handleNextQuestion()}
       className="nextQuestion"
     >
       Weiter

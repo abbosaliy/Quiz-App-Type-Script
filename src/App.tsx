@@ -3,7 +3,7 @@ import './App.css';
 import QuizQuestion from './components/QuizContainer';
 
 function App() {
-  const [start, setStart] = useState(false);
+  const [start, setStart] = useState<Boolean>(false);
 
   return (
     <div>
