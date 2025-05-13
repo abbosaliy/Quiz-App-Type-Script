@@ -54,25 +54,23 @@ function QuizQuestion() {
       <h2 className="quiz-text">{renderQuestion[question].question}</h2>
 
       <div className="quizBox-options">
-        {renderQuestion[question].options.map((quiz, index) => {
-          let className = ' optionsBtn';
-          if (answer !== null) {
-            if (index === renderQuestion[question].correctAnswer) {
-              className += ' correct';
-            } else if (index === answer) {
-              className += ' wrong';
+        {renderQuestion[question].options.map((quiz, index) => (
+          <button
+            key={index}
+            onClick={() => setAnswer(index)}
+            className={
+              answer === null
+                ? 'optionsBtn'
+                : index === renderQuestion[question].correctAnswer
+                ? 'optionsBtn correct'
+                : index === answer
+                ? 'optionsBtn wrong'
+                : 'optionsBtn'
             }
-          }
-          return (
-            <button
-              key={index}
-              onClick={() => setAnswer(index)}
-              className={className}
-            >
-              {quiz}
-            </button>
-          );
-        })}
+          >
+            {quiz}
+          </button>
+        ))}
       </div>
       <NextQuestion handleNextQuestion={handleNext} />
     </div>
